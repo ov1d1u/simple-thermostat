@@ -12,7 +12,9 @@ ha-card {
   font-weight: var(--paper-font-body1_-_font-weight);
   line-height: var(--paper-font-body1_-_line-height);
 
+  padding-left: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
   padding-bottom: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
+  padding-right: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
 
   --auto-color: green;
   --heat_cool-color: springgreen;
