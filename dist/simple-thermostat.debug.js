@@ -1257,11 +1257,8 @@ class SimpleThermostat extends i$1 {
             wait: DEBOUNCE_TIMEOUT,
         });
         this.localize = (label, prefix = '') => {
-            var _a, _b;
-            const lang = this._hass.selectedLanguage || this._hass.language;
             const key = `${prefix}${label}`;
-            const translations = (_a = this._hass.resources) === null || _a === void 0 ? void 0 : _a[lang];
-            return (_b = translations === null || translations === void 0 ? void 0 : translations[key]) !== null && _b !== void 0 ? _b : label;
+            return this._hass.localize(key) || label;
         };
         this.toggleEntityChanged = (ev) => {
             var _a, _b, _c, _d;
