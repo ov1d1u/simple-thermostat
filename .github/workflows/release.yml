@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: master
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,6 +26,14 @@ jobs:
         run: |
           npm install --legacy-peer-deps
           npm run build
+
+      - name: Commit dist to master
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git diff --staged --quiet || git commit -m "chore: update dist for release"
+          git push origin master
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
