@@ -2,7 +2,7 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-> **Note**: This is a community-maintained fork of the [original simple-thermostat](https://github.com/nervetattoo/simple-thermostat) by [@nervetattoo](https://github.com/nervetattoo), as the original repository is no longer actively maintained.
+> **Note**: This is a claude fixed fork of the [original simple-thermostat](https://github.com/nervetattoo/simple-thermostat) by [@nervetattoo](https://github.com/nervetattoo), as the original repository is no longer actively maintained.
 
 A different take on the thermostat card for Home Assistant Lovelace UI.
 The aim is to provide a card with simpler interactions that are easier to use and take up less space, as well as provide more modularity to tweak the card. For example the abiltity to embed sensor values that are relevant to your thermostat (like humidity, energy usage, hours on +++).
@@ -38,11 +38,11 @@ If you're migrating from the [original repository](https://github.com/nervetatto
 
 **Via HACS:**
 1. Remove the old integration (⋮ menu → Remove)
-2. Add this repository as a custom repository: `https://github.com/pmbsa/simple-thermostat`
+2. Add this repository as a custom repository: `https://github.com/Wheemer/simple-thermostat`
 3. Install from HACS
 
 **Manual:**
-1. Download `simple-thermostat.js` from the [latest release](https://github.com/pmbsa/simple-thermostat/releases/latest)
+1. Download `simple-thermostat.js` from the [latest release](https://github.com/Wheemer/simple-thermostat/releases/latest)
 2. Replace the existing file in your `www` folder
 3. Clear browser cache
 
@@ -61,7 +61,7 @@ Home Assistant 2021.11.0 or higher
 
 <details>
    <summary>Manual install</summary>
-1. Download the `simple-thermostat.js` from the [latest release](https://github.com/pmbsa/simple-thermostat/releases/latest) and store it in your `configuration/www` folder.
+1. Download the `simple-thermostat.js` from the [latest release](https://github.com/Wheemer/simple-thermostat/releases/latest) and store it in your `configuration/www` folder.
    _Previously you could download the source file from Github but starting from the 0.14 release that is no longer possible. If you try to do so it will crash_
 2. Configure Lovelace to load the card:
 
