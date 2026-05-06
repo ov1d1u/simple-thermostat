@@ -38,8 +38,10 @@ If you're migrating from the [original repository](https://github.com/nervetatto
 
 **Via HACS:**
 1. Remove the old integration (⋮ menu → Remove)
-2. Add this repository as a custom repository: `https://github.com/Wheemer/simple-thermostat`
-3. Install from HACS
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Wheemer&repository=simple-thermostat&category=plugin)
+3. Add this repository as a custom repository: `https://github.com/Wheemer/simple-thermostat`
+4. Install from HACS
 
 **Manual:**
 1. Download `simple-thermostat.js` from the [latest release](https://github.com/Wheemer/simple-thermostat/releases/latest)
