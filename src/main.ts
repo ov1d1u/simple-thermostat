@@ -434,9 +434,9 @@ export default class SimpleThermostat extends LitElement {
 
                 <h3
                   @click=${() => this.openEntityPopover()}
-                  class="current--value ${_updatingValues
-                    ? 'updating'
-                    : nothing}"
+                  class=${_updatingValues
+                    ? 'current--value updating'
+                    : 'current--value'}
                 >
                   ${formatNumber(value, config)}
                   ${showUnit
