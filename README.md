@@ -28,6 +28,11 @@ control: false
 
 If you're migrating from the [original repository](https://github.com/nervetattoo/simple-thermostat):
 
+### Version 3.0.4 Changes
+- Used claude to help bring to HA 2026.5.0 compliance.
+- No configuration changes required - your existing card config will continue to work
+- New repository location for updates
+
 ### Version 3.0.0 Changes
 - Updated to Lit 3.x (from Lit 2.x)
 - Updated all dependencies to latest versions
