@@ -1534,9 +1534,9 @@ class SimpleThermostat extends i$1 {
 
                 <h3
                   @click=${() => this.openEntityPopover()}
-                  class="current--value ${_updatingValues
-                ? 'updating'
-                : A}"
+                  class=${_updatingValues
+                ? 'current--value updating'
+                : 'current--value'}
                 >
                   ${formatNumber(value, config)}
                   ${showUnit

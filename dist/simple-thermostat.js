@@ -333,7 +333,7 @@ ha-switch {
 
                 <h3
                   @click=${()=>this.openEntityPopover()}
-                  class="current--value ${i?"updating":B}"
+                  class=${i?"current--value updating":"current--value"}
                 >
                   ${St(e,n)}
                   ${o?D`<span class="current--unit">${u}</span>`:B}
