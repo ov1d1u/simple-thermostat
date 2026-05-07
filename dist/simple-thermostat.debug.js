@@ -70,12 +70,14 @@ var css_248z = i$4`:host {
   --st-default-spacing: 4px;
 }
 ha-card {
-  -webkit-font-smoothing: var(--paper-font-body1_-_-webkit-font-smoothing);
-  font-size: var(--paper-font-body1_-_font-size);
-  font-weight: var(--paper-font-body1_-_font-weight);
-  line-height: var(--paper-font-body1_-_line-height);
+  -webkit-font-smoothing: var(--ha-font-smoothing);
+  font-size: var(--ha-font-size-m);
+  font-weight: var(--ha-font-weight-normal);
+  line-height: var(--ha-line-height-normal);
 
+  padding-left: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
   padding-bottom: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
+  padding-right: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
 
   --auto-color: green;
   --heat_cool-color: springgreen;
@@ -89,6 +91,10 @@ ha-card {
 
 ha-card.no-header {
   padding: calc(var(--st-spacing, var(--st-default-spacing)) * 4) 0;
+}
+
+ha-icon-button ha-icon {
+  display: flex;
 }
 
 .body {
@@ -108,7 +114,7 @@ ha-card.no-header {
   font-size: 16px;
   font-size: var(
     --st-font-size-toggle-label,
-    var(--paper-font-subhead_-_font-size, 16px)
+    var(--ha-font-size-l, 16px)
   );
 }
 
@@ -135,7 +141,7 @@ ha-card.no-header {
   font-size: 16px;
   font-size: var(
     --st-font-size-sensors,
-    var(--paper-font-subhead_-_font-size, 16px)
+    var(--ha-font-size-l, 16px)
   );
 }
 .sensors.as-list {
@@ -186,14 +192,14 @@ header {
 .header__icon {
   margin-right: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
   color: #44739e;
-  color: var(--paper-item-icon-color, #44739e);
+  color: var(--state-icon-color, #44739e);
 }
 .header__title {
   font-size: 24px;
   font-size: var(--st-font-size-title, var(--ha-card-header-font-size, 24px));
   line-height: 24px;
   line-height: var(--st-font-size-title, var(--ha-card-header-font-size, 24px));
-  -webkit-font-smoothing: var(--paper-font-headline_-_-webkit-font-smoothing);
+  -webkit-font-smoothing: var(--ha-font-smoothing);
   font-weight: normal;
   margin: 0;
   align-self: left;
@@ -215,20 +221,20 @@ header {
   align-items: center;
   margin: 0;
   font-weight: 400;
-  line-height: var(--st-font-size-l, var(--paper-font-display1_-_font-size));
-  font-size: var(--st-font-size-l, var(--paper-font-display1_-_font-size));
+  line-height: var(--st-font-size-l, var(--ha-font-size-4xl));
+  font-size: var(--st-font-size-l, var(--ha-font-size-4xl));
 }
 @media (min-width: 768px) {
 .current--value {
-    font-size: var(--st-font-size-xl, var(--paper-font-display2_-_font-size));
-    line-height: var(--st-font-size-xl, var(--paper-font-display2_-_font-size));
+    font-size: var(--st-font-size-xl, var(--ha-font-size-5xl));
+    line-height: var(--st-font-size-xl, var(--ha-font-size-5xl));
 }
   }
 .current--value.updating {
     color: var(--error-color);
   }
 .current--unit {
-  font-size: var(--st-font-size-m, var(--paper-font-title_-_font-size));
+  font-size: var(--st-font-size-m, var(--ha-font-size-xl));
 }
 .thermostat-trigger {
   padding: 0px;
@@ -255,7 +261,7 @@ header {
   font-size: 16px;
   font-size: var(
     --st-font-size-sensors,
-    var(--paper-font-subhead_-_font-size, 16px)
+    var(--ha-font-size-l, 16px)
   );
   font-weight: 300;
   white-space: nowrap;
