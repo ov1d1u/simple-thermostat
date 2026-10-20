@@ -127,14 +127,21 @@ header {
   color: var(--state-icon-color, #44739e);
 }
 .header__title {
+  color: var(--ha-card-header-color, var(--primary-text-color));
+  font-family: inherit;
+  font-family: var(--ha-card-header-font-family, inherit);
   font-size: 24px;
-  font-size: var(--st-font-size-title, var(--ha-card-header-font-size, 24px));
-  line-height: 24px;
-  line-height: var(--st-font-size-title, var(--ha-card-header-font-size, 24px));
+  font-size: var(
+    --st-font-size-title,
+    var(--ha-card-header-font-size, var(--ha-font-size-2xl, 24px))
+  );
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  line-height: var(--ha-line-height-condensed, 1.2);
   -webkit-font-smoothing: var(--ha-font-smoothing);
-  font-weight: normal;
+  font-weight: 400;
+  font-weight: var(--ha-font-weight-normal, 400);
   margin: 0;
-  align-self: left;
 }
 .current-wrapper {
   display: flex;
@@ -509,4 +516,4 @@ ha-switch {
           </div>
         </div>
       </div>
-    `:D``}valueChanged(t){if(!this.config||!this.hass)return;const{target:e}=t,i=(n=this.config,JSON.parse(JSON.stringify(n)));var n;e.configValue&&(""===e.value?delete i[e.configValue]:function(t,e,i){const n=e.split(".");let s=t;for(;n.length-1;){var o=n.shift();s.hasOwnProperty(o)||(s[o]={}),s=s[o]}s[n[0]]=i}(i,e.configValue,void 0!==e.checked?e.checked:e.value)),ct(this,"config-changed",{config:i})}toggleHeader(t){this.config.header=!!t.target.checked&&{},ct(this,"config-changed",{config:this.config})}}),console.info(`%c${t}: 3.0.0`,"font-weight: bold"),window.customCards=window.customCards||[],window.customCards.push({type:t,name:"Simple Thermostat",preview:!1,description:"A different take on the thermostat card"});
+    `:D``}valueChanged(t){if(!this.config||!this.hass)return;const{target:e}=t,i=(n=this.config,JSON.parse(JSON.stringify(n)));var n;e.configValue&&(""===e.value?delete i[e.configValue]:function(t,e,i){const n=e.split(".");let s=t;for(;n.length-1;){var o=n.shift();s.hasOwnProperty(o)||(s[o]={}),s=s[o]}s[n[0]]=i}(i,e.configValue,void 0!==e.checked?e.checked:e.value)),ct(this,"config-changed",{config:i})}toggleHeader(t){this.config.header=!!t.target.checked&&{},ct(this,"config-changed",{config:this.config})}}),console.info(`%c${t}: 3.0.2`,"font-weight: bold"),window.customCards=window.customCards||[],window.customCards.push({type:t,name:"Simple Thermostat",preview:!1,description:"A different take on the thermostat card"});
