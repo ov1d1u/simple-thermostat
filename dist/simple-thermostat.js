@@ -117,9 +117,13 @@ header {
   flex-direction: row;
   align-items: center;
 
-  padding: calc(var(--st-spacing, var(--st-default-spacing)) * 6)
-    calc(var(--st-spacing, var(--st-default-spacing)) * 4)
-    calc(var(--st-spacing, var(--st-default-spacing)) * 4);
+  /* Cancel the card's side padding before applying native header spacing. */
+  margin-left: calc(var(--st-spacing, var(--st-default-spacing)) * -2);
+  margin-right: calc(var(--st-spacing, var(--st-default-spacing)) * -2);
+  padding: 20px 16px
+    24px;
+  padding: var(--ha-space-5, 20px) var(--ha-space-4, 16px)
+    var(--ha-space-6, 24px);
 }
 .header__icon {
   margin-right: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
@@ -516,4 +520,4 @@ ha-switch {
           </div>
         </div>
       </div>
-    `:D``}valueChanged(t){if(!this.config||!this.hass)return;const{target:e}=t,i=(n=this.config,JSON.parse(JSON.stringify(n)));var n;e.configValue&&(""===e.value?delete i[e.configValue]:function(t,e,i){const n=e.split(".");let s=t;for(;n.length-1;){var o=n.shift();s.hasOwnProperty(o)||(s[o]={}),s=s[o]}s[n[0]]=i}(i,e.configValue,void 0!==e.checked?e.checked:e.value)),ct(this,"config-changed",{config:i})}toggleHeader(t){this.config.header=!!t.target.checked&&{},ct(this,"config-changed",{config:this.config})}}),console.info(`%c${t}: 3.0.2`,"font-weight: bold"),window.customCards=window.customCards||[],window.customCards.push({type:t,name:"Simple Thermostat",preview:!1,description:"A different take on the thermostat card"});
+    `:D``}valueChanged(t){if(!this.config||!this.hass)return;const{target:e}=t,i=(n=this.config,JSON.parse(JSON.stringify(n)));var n;e.configValue&&(""===e.value?delete i[e.configValue]:function(t,e,i){const n=e.split(".");let s=t;for(;n.length-1;){var o=n.shift();s.hasOwnProperty(o)||(s[o]={}),s=s[o]}s[n[0]]=i}(i,e.configValue,void 0!==e.checked?e.checked:e.value)),ct(this,"config-changed",{config:i})}toggleHeader(t){this.config.header=!!t.target.checked&&{},ct(this,"config-changed",{config:this.config})}}),console.info(`%c${t}: 3.0.3`,"font-weight: bold"),window.customCards=window.customCards||[],window.customCards.push({type:t,name:"Simple Thermostat",preview:!1,description:"A different take on the thermostat card"});

@@ -11,7 +11,7 @@
 })();
 
 var name = "simple-thermostat";
-var version = "3.0.2";
+var version = "3.0.3";
 
 /**
  * @license
@@ -185,9 +185,13 @@ header {
   flex-direction: row;
   align-items: center;
 
-  padding: calc(var(--st-spacing, var(--st-default-spacing)) * 6)
-    calc(var(--st-spacing, var(--st-default-spacing)) * 4)
-    calc(var(--st-spacing, var(--st-default-spacing)) * 4);
+  /* Cancel the card's side padding before applying native header spacing. */
+  margin-left: calc(var(--st-spacing, var(--st-default-spacing)) * -2);
+  margin-right: calc(var(--st-spacing, var(--st-default-spacing)) * -2);
+  padding: 20px 16px
+    24px;
+  padding: var(--ha-space-5, 20px) var(--ha-space-4, 16px)
+    var(--ha-space-6, 24px);
 }
 .header__icon {
   margin-right: calc(var(--st-spacing, var(--st-default-spacing)) * 2);
